@@ -35,9 +35,9 @@ class QuizzesTest(unittest.TestCase):
         # Check that one quiz has been added in the list
         quizzes = self.ctrl.get_quizzes()
         self.assertEquals(len(quizzes), 1, "There is exactly one quiz.")
-        # Add a question usng the same quiz id but we pass datetime object as title in place of string
+        # Add a question using the same quiz id but we pass datetime object as title in place of string
         question_id = self.ctrl.add_question(quiz_id, datetime.now(), "Sample question")
-        # Asswer and check if the valid question is added.
+        # Answer and check if the valid question is added.
         self.assertIsNotNone(question_id, "A valid question_id is fetched.")
 
 
